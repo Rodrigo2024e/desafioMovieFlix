@@ -40,7 +40,7 @@ public class GenreControllerIT {
 		memberUsername = "ana@gmail.com";
 		memberPassword = "123456";
 	}
-
+//Ok
 	@Test
 	public void findAllShouldReturnUnauthorizedWhenNotValidToken() throws Exception {
 
@@ -50,7 +50,7 @@ public class GenreControllerIT {
 
 		result.andExpect(status().isUnauthorized());
 	}
-	
+//Ok	
 	@Test
 	public void findAllShouldReturnAllGenresWhenVisitorAuthenticated() throws Exception {
 
@@ -69,7 +69,7 @@ public class GenreControllerIT {
 		result.andExpect(jsonPath("$[2].id").value(3L));
 		result.andExpect(jsonPath("$[2].name").value("Drama"));
 	}
-	
+//Ok	
 	@Test
 	public void findAllShouldReturnAllGenresWhenMemberAuthenticated() throws Exception {
 
