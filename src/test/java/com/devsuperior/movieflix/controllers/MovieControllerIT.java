@@ -46,7 +46,7 @@ public class MovieControllerIT {
 		memberUsername = "ana@gmail.com";
 		memberPassword = "123456";
 	}
-
+//ok
 	@Test
 	public void findByIdShouldReturnUnauthorizedWhenNoTokenGiven() throws Exception {
 
@@ -56,7 +56,7 @@ public class MovieControllerIT {
 
 		result.andExpect(status().isUnauthorized());
 	}
-
+//ok
 	@Test
 	public void findByIdShouldReturnMovieWhenUserVisitorAuthenticated() throws Exception {
 
@@ -78,7 +78,7 @@ public class MovieControllerIT {
 		result.andExpect(jsonPath("$.genre.id").isNotEmpty());
 		result.andExpect(jsonPath("$.genre.name").isNotEmpty());
 	}
-
+//ok
 	@Test
 	public void findByIdShouldReturnMovieWhenMemberAuthenticated() throws Exception {
 
@@ -100,7 +100,7 @@ public class MovieControllerIT {
 		result.andExpect(jsonPath("$.genre.id").isNotEmpty());
 		result.andExpect(jsonPath("$.genre.name").isNotEmpty());
 	}
-
+//ok
 	@Test
 	public void findByIdShouldReturnNotFoundWhenIdDoesNotExist() throws Exception {
 
@@ -113,7 +113,7 @@ public class MovieControllerIT {
 
 		result.andExpect(status().isNotFound());
 	}
-	
+//ok	
 	@Test
 	public void findByGenreShouldReturnUnauthorizedWhenNoTokenGiven() throws Exception {
 
@@ -123,7 +123,7 @@ public class MovieControllerIT {
 
 		result.andExpect(status().isUnauthorized());
 	}
-
+	//ok
 	@Test
 	public void findByGenreShouldReturnOrderedPageWhenVisitorAuthenticated() throws Exception {
 
@@ -147,7 +147,7 @@ public class MovieControllerIT {
 		result.andExpect(jsonPath("$.content[3].title").value("Kingsman"));
 		result.andExpect(jsonPath("$.content[4].title").value("O Labirinto do Fauno"));
 	}
-
+	//ok
 	@Test
 	public void findByGenreShouldReturnOrderedPageWhenMemberAuthenticated() throws Exception {
 
@@ -171,7 +171,7 @@ public class MovieControllerIT {
 		result.andExpect(jsonPath("$.content[3].title").value("Kingsman"));
 		result.andExpect(jsonPath("$.content[4].title").value("O Labirinto do Fauno"));
 	}
-
+	//ok
 	@Test
 	public void findByGenreShouldReturnFilteredMoviesWhenGenreIsInformed() throws Exception {
 

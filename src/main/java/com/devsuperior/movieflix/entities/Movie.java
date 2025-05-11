@@ -51,7 +51,7 @@ public class Movie {
         this.synopsis = synopsis;
         this.genre = genre;
     }
-
+    
     public Long getId() {
         return id;
     }
